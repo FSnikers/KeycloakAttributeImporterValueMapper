@@ -1,6 +1,6 @@
 # 🔑 Keycloak Attribute Imporyer with Value Mapper
 
-[![License](https://img.shields.io/badge/License-MIT-green.svg)]([https://opensource.org/licenses/MIT](https://github.com/FSnikers/KeycloakAttributeImporterValueMapper/blob/master/LICENSE))
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/FSnikers/KeycloakAttributeImporterValueMapper/blob/master/LICENSE)
 [![Keycloak Version](https://img.shields.io/badge/Keycloak-18.0%2B-blue)](https://www.keycloak.org)
 [![Java Version](https://img.shields.io/badge/Java-11%2B-orange)](https://openjdk.org)
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.FSnikers/keycloak-advanced-attribute-mapper)](https://search.maven.org/artifact/io.github.FSnikers/keycloak-advanced-attribute-mapper)
