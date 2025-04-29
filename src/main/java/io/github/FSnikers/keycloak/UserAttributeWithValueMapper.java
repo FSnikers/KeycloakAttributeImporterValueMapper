@@ -30,7 +30,6 @@ public class UserAttributeWithValueMapper extends AbstractClaimMapper {
     private static final ObjectMapper jsonMapper = new ObjectMapper();
 
     static {
-        // Базовые параметры
         addConfigProperty(CLAIM_NAME, "Claim Name",
                 "Name of claim to import (use '.' for nested claims)",
                 ProviderConfigProperty.STRING_TYPE, null);
@@ -39,7 +38,6 @@ public class UserAttributeWithValueMapper extends AbstractClaimMapper {
                 "Target user attribute name",
                 ProviderConfigProperty.STRING_TYPE, null);
 
-        // Дополнительные параметры
         addConfigProperty(VALUE_MAPPINGS, "Value Mappings",
                 "JSON map for value transformations. Example: {\"external\":\"internal\"}",
                 ProviderConfigProperty.STRING_TYPE, "{}");
@@ -131,13 +129,11 @@ public class UserAttributeWithValueMapper extends AbstractClaimMapper {
             Object claimValue = getClaimValue(mapperModel, context);
             String value = claimValue != null ? claimValue.toString() : null;
 
-            // Получаем конфигурацию
             String mappingsJson = mapperModel.getConfig().get(VALUE_MAPPINGS);
             String defaultValue = mapperModel.getConfig().get(DEFAULT_VALUE);
             boolean regexEnabled = Boolean.parseBoolean(
                     mapperModel.getConfig().getOrDefault(REGEX_ENABLED, "false"));
 
-            // Применяем преобразования
             return transformValue(value, mappingsJson, defaultValue, regexEnabled);
         } catch (Exception e) {
             throw new RuntimeException("Error processing attribute mapping", e);
@@ -156,14 +152,12 @@ public class UserAttributeWithValueMapper extends AbstractClaimMapper {
                     });
 
             if (regexEnabled) {
-                // Режим regex: ищем первое совпадение с паттернами
                 for (Map.Entry<String, String> entry : mappings.entrySet()) {
                     if (Pattern.compile(entry.getKey()).matcher(originalValue).matches()) {
                         return entry.getValue();
                     }
                 }
             } else if (mappings.containsKey(originalValue)) {
-                // Обычный режим: точное совпадение
                 return mappings.get(originalValue);
             }
         }
