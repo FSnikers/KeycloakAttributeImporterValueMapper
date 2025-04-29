@@ -51,7 +51,7 @@ mvn clean package
 {
   "external_admin": "internal_admin",
   "external_user": "basic_user",
-  "external_.*: "matched_by_regex_user"
+  "external_.*": "matched_by_regex_user"
 }
 ```
 
