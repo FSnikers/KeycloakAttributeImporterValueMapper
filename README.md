@@ -1,4 +1,4 @@
-# 🔑 Keycloak Attribute Imporyer with Value Mapper
+# 🔑 Keycloak Attribute Importer with Value Mapper
 
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/FSnikers/KeycloakAttributeImporterValueMapper/blob/master/LICENSE)
 [![Keycloak Version](https://img.shields.io/badge/Keycloak-26.0%2B-blue)](https://www.keycloak.org)
