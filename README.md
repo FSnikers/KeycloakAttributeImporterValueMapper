@@ -22,8 +22,8 @@ Advanced attribute mapping extension for Keycloak with value transformation capa
 
 ### Build from Source
 ```bash
-git clone https://github.com/FSnikers/keycloak-advanced-attribute-mapper.git
-cd keycloak-advanced-attribute-mapper
+git clone https://github.com/FSnikers/KeycloakAttributeImporterValueMapper.git
+cd KeycloakAttributeImporterValueMapper
 mvn clean package
 ```
 
