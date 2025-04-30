@@ -54,4 +54,3 @@ mvn clean package
   "external_.*": "matched_by_regex_user"
 }
 ```
-Distributed under the MIT License. See LICENSE for more information.
