@@ -33,7 +33,7 @@ mvn clean package
 1. **Navigate** to:  
    `Identity Providers` → `Your Provider` → `Mappers` → `Add Mapper`
 2. **Select**:  
-   `Advanced Attribute Mapper` from dropdown
+   `Attribute Importer with Value Mapper" from dropdown
 3. **Configure** parameters:
 
 | Parameter        | Type    | Description                     | Example Value                |
